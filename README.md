@@ -1,5 +1,5 @@
 # openPEGASYS
-Re-implementation of basic features of the ancient proprietary PEGASYS CardKey P900 software to control the (door) access system.
+Re-implementation of basic features of the ancient proprietary PEGASYS CardKey P900 "Granta" software to control the (door) access system.
 
 The original Windows software is older than I am and hard to operate securely on modern Windows versions. This projects aims to provide the basic features using a modern software environment on Linux basis.
 
@@ -25,4 +25,14 @@ For details about the communication with the controllers, read [Controller Commu
    - adjust the path to your `pegasys.py`
    - `systemctl enable pegasys && systemctl start pegasys`
 
-Have fun.
+## ToDo
+Currently not implemented, but certainly easy to do:
+- time frame check ("Frames" table)
+- user card date (from-to) validity check
+- recording the last location where a card was used, as the original software does
+- other controller transport communication methods than IP
+- sync card numbers / names with other systems
+- GUI for data changes
+
+## Support
+You can hire me for commercial support or adjustments for this project. Please [contact me](https://georg-sieber.de/?page=impressum) if you are interested.
