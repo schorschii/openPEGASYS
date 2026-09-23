@@ -9,20 +9,20 @@ To: controller, static configured UDP port (e.g. 10001)
 Content: `!F#`
 
 ### Status Response
-Description: as response to a status request
+Description: as response to a status request  
 From: controller, static configured UDP port (e.g. 10001)  
-To: computer, random UDP port  
+To: computer, random UDP port (same as request)  
 Content: `&F#`
 
 ### Access Request
-Description: a card was scanned by a reader, check if access should be granted
+Description: a card was scanned by a module (card reader), check if access should be granted  
 From: controller, static configured UDP port (e.g. 10001)  
 To: computer, static configured UDP port (e.g. 23)  
 Content: `%39V00:1223724,1,210926,1234,0,00,0 09#`  
 Content dissection:
 - `%`       --> begin message
 - `39V`     --> opcode?
-- `00:1`    --> controller:reader
+- `00:1`    --> controller:module
 - `223724`  --> time
 - `3`       --> day of week
 - `210926`  --> date
