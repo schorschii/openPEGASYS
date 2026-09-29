@@ -24,6 +24,7 @@ class QueueListener(threading.Thread):
 		self.ccur = self.ccon.cursor()
 		self.ccur.execute('CREATE TABLE IF NOT EXISTS UserChange(ID INTEGER PRIMARY KEY AUTOINCREMENT, CARDNO, LEVEL, PERS_AP1, PERS_AP2, PERS_AP3, PERS_AP4)')
 		self.workingOnQueue = False
+		self.queueChanged() # process items added when pegad was not running
 
 	def run(self, *args, **kwargs):
 		self.initDb()
